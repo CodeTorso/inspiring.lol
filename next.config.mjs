@@ -1,4 +1,18 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    remotePatterns: ["did-see.pockethost.io"],
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "did-see.pockethost.io",
+        port: "",
+        pathname: "/api/files/blogs/**",
+      },
+    ],
+  },
+};
 
 export default nextConfig;

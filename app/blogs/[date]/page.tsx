@@ -1,14 +1,9 @@
 import Image from "next/image";
-import { fetchBlog } from "./actions/fetchBlog";
+import { fetchBlog } from "@/app/actions/fetchBlog";
 
-
-export default async function Home() {
-  const date = new Date();
-  const argument = `${date.getFullYear()}-${(date.getMonth() + 1)
-    .toString()
-    .padStart(2, "0")}-${date.getDate()}`;
-  const data = await fetchBlog(argument);
-
+export default async function Home({ params }: any) {
+  const data = await fetchBlog(params.date);
+  console.log(data.items[0].id);
   return (
     <div>
       <Image
@@ -19,7 +14,7 @@ export default async function Home() {
         src={`https://did-see.pockethost.io/api/files/blogs/${data.items[0].id}/${data.items[0].person_image}`}
       />
       <div
-        className="break-words font-normal md:text-base lg:text-lg text-gray-600  flex flex-col gap-5"
+        className="break-words font-normal md:text-base lg:text-lg text-gray-600 flex flex-col gap-5"
         dangerouslySetInnerHTML={{ __html: data.items[0].content }}
       />
     </div>
