@@ -9,11 +9,11 @@ export default async function Home() {
     <div className="flex flex-col gap-8">
       {data.items.map(
         (item: {
-          id: String;
-          date: String;
-          title: String;
-          content: String;
-          person_image: String;
+          id: string;
+          date: string;
+          title: string;
+          content: string;
+          person_image: string;
         }) => {
           return (
             <Link key={item.id} href={`/blogs/${item.date.slice(0, 10)}`}>
