@@ -16,9 +16,8 @@ export default async function Home() {
           person_image: String;
         }) => {
           return (
-            <Link href={`/blogs/${item.date.slice(0, 10)}`}>
+            <Link key={item.id} href={`/blogs/${item.date.slice(0, 10)}`}>
               <div
-                key={item.id}
                 className="w-full h-48 px-4 py-3 rounded-xl hover:shadow-gray-100 shadow-sm transition-all border-2 border-gray-300 flex"
               >
                 <Image
