@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${GeistSans.className} w-full box-content mr-[calc(100vw-100%)] flex justify-center`}
+        className={`${GeistSans.className} w-screen overflow-x-hidden box-content mr-[calc(100vw-100%)] flex justify-center`}
       >
         <ThemeProvider
           attribute="class"
@@ -25,7 +25,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="hidden sticky top-0 sm:flex flex-col pr-2 md:pr-4 lg:pr-8 justify-center h-screen">
-            <div className="border-r-[1px] border-gray-200 h-[98vh] px-[0.35rem] lg:px-6">
+            <div className="border-r-[1px] border-gray-300 dark:border-gray-700 h-[98vh] px-[0.35rem] lg:px-6">
               <Navigation />
             </div>
           </div>

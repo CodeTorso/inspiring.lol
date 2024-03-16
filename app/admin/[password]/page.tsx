@@ -9,13 +9,30 @@ function Home({ params }: any) {
   }
 
   return (
-    <div>
+    <div className="flex flex-col gap-20 items-center justify-center h-[50vh]">
       <form action={todaysPost}>
-        <button type="submit">Change Todays</button>
+        <button
+          className="py-2 px-4 rounded-md border-2 border-gray-400 dark:border-gray-700"
+          type="submit"
+        >
+          Revalidate Today's
+        </button>
       </form>
-      <form action={pastPost}>
-        <input name="date" placeholder="2024-03-14" type="text" />
-        <button type="submit">Try</button>
+      <form className="flex flex-col gap-5 items-center" action={pastPost}>
+        <input
+          className="px-4 py-2 border-gray-400 dark:border-gray-500 border-2 rounded-sm"
+          name="date"
+          placeholder="2024-03-14"
+          type="text"
+        />
+        <div>
+          <button
+            className="py-2 px-4 rounded-md border-2 border-gray-400 dark:border-gray-700"
+            type="submit"
+          >
+            Revalidate
+          </button>
+        </div>
       </form>
     </div>
   );

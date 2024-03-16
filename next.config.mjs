@@ -9,7 +9,7 @@ const nextConfig = {
         protocol: "https",
         hostname: "did-see.pockethost.io",
         port: "",
-        pathname: "/api/files/blogs/**",
+        pathname: "/api/files/**",
       },
     ],
   },

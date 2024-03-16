@@ -13,7 +13,7 @@ export default async function Home({ params }: any) {
         src={`https://did-see.pockethost.io/api/files/blogs/${data.items[0].id}/${data.items[0].person_image}`}
       />
       <div
-        className="break-words font-normal md:text-base lg:text-lg text-gray-600 flex flex-col gap-5"
+        className="break-words font-normal md:text-base lg:text-lg text-gray-600 dark:text-gray-100 flex flex-col gap-5"
         dangerouslySetInnerHTML={{ __html: data.items[0].content }}
       />
     </div>

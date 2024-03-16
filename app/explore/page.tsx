@@ -2,40 +2,54 @@ import Image from "next/image";
 import Link from "next/link";
 import { fetchBlogs } from "../actions/fetchBlog";
 
+function getRandomColor() {
+  const colors = [
+    "border-green-400",
+    "border-yellow-400",
+    "border-gray-500",
+    "border-cyan-400",
+    "border-violet-400",
+  ];
+
+  const randomIndex = Math.floor(Math.random() * colors.length);
+  return colors[randomIndex];
+}
+
 export default async function Home() {
   const data = await fetchBlogs();
-  console.log(data);
   return (
     <div className="flex flex-col gap-8">
       {data.items.map(
         (item: {
           id: string;
-          date: string;
-          title: string;
-          content: string;
           person_image: string;
+          person_name: string;
+          date: string;
+          info_blobs: string[];
         }) => {
           return (
             <Link key={item.id} href={`/blogs/${item.date.slice(0, 10)}`}>
-              <div
-                className="w-full h-48 px-4 py-3 rounded-xl hover:shadow-gray-100 shadow-sm transition-all border-2 border-gray-300 flex"
-              >
+              <div className="overflow-hidden w-full h-42 px-4 py-2 rounded-xl border-2 border-gray-300 dark:border-gray-800 flex">
                 <Image
-                  className="rounded-xl"
+                  className="rounded-xl h-full"
                   alt="pfp"
                   height={180}
                   width={180}
-                  src={`https://did-see.pockethost.io/api/files/blogs/${item.id}/${item.person_image}`}
+                  src={`https://did-see.pockethost.io/api/files/explore/${item.id}/${item.person_image}`}
                 />
-                <div className="pl-2 overflow-hidden">
-                  <div
-                    className="break-words font-normal md:text-base lg:text-sm text-gray-600"
-                    dangerouslySetInnerHTML={{ __html: item.title }}
-                  />
-                  <div
-                    className="break-words font-normal md:text-base lg:text-sm text-gray-600"
-                    dangerouslySetInnerHTML={{ __html: item.content }}
-                  />
+                <div className="w-full flex flex-col gap-8">
+                  <h2 className="text-center text-xl">{item.person_name}</h2>
+                  <div className="flex gap-2 px-6 py-2">
+                    {item.info_blobs.map((info) => {
+                      return (
+                        <div
+                          className={`py-2 px-3 border-2 rounded-xl ${getRandomColor()}`}
+                        >
+                          {info}
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
             </Link>
