@@ -3,7 +3,6 @@ import { fetchBlog } from "@/app/actions/fetchBlog";
 
 export default async function Home({ params }: any) {
   const data = await fetchBlog(params.date);
-  console.log(data.items[0].id);
   return (
     <div>
       <Image

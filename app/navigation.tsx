@@ -5,6 +5,7 @@ import { IoMdSearch } from "react-icons/io";
 import { RiHome4Line } from "react-icons/ri";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ThemeToggler } from "@/components/themeToggle";
 
 function Navigation() {
   const pathname = usePathname();
@@ -15,8 +16,8 @@ function Navigation() {
           size={46}
           className={`${
             pathname === "/search"
-              ? "hover:bg-blue-100 fill-blue-400"
-              : "hover:bg-gray-200 fill-gray-500"
+              ? "hover:bg-blue-100 dark:hover:bg-gray-900 fill-blue-400"
+              : "hover:bg-gray-200 dark:hover:bg-gray-900 fill-gray-500"
           } p-2 rounded-full transition-all`}
         />
       </Link>
@@ -25,8 +26,8 @@ function Navigation() {
           size={44}
           className={`${
             pathname === "/explore"
-              ? "hover:bg-blue-100 fill-blue-400"
-              : "hover:bg-gray-200 fill-gray-500"
+              ? "hover:bg-blue-100 dark:hover:bg-gray-900 fill-blue-400"
+              : "hover:bg-gray-200 dark:hover:bg-gray-900 fill-gray-500"
           } p-2 rounded-full transition-all`}
         />
       </Link>
@@ -35,11 +36,12 @@ function Navigation() {
           size={46}
           className={`${
             pathname.slice(0, 6) === "/"
-              ? "hover:bg-blue-100 fill-blue-400"
-              : "hover:bg-gray-200 fill-gray-500"
+              ? "hover:bg-blue-100 dark:hover:bg-gray-900 fill-blue-400"
+              : "hover:bg-gray-200 dark:hover:bg-gray-900 fill-gray-500"
           } p-2 rounded-full transition-all`}
         />
       </Link>
+      <ThemeToggler />
     </div>
   );
 }
