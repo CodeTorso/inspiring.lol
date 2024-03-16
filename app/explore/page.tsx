@@ -42,7 +42,7 @@ export default async function Home() {
                   <div className="flex gap-2 px-6 py-2">
                     {item.info_blobs.map((info) => {
                       return (
-                        <div
+                        <div key={info}
                           className={`py-2 px-3 border-2 rounded-xl ${getRandomColor()}`}
                         >
                           {info}

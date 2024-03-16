@@ -15,7 +15,7 @@ function Home({ params }: any) {
           className="py-2 px-4 rounded-md border-2 border-gray-400 dark:border-gray-700"
           type="submit"
         >
-          Revalidate Today's
+          Revalidate Today&apos;s
         </button>
       </form>
       <form className="flex flex-col gap-5 items-center" action={pastPost}>
