@@ -8,9 +8,6 @@ export default async function Home() {
   const data = await fetchBlog(argument);
 
   return (
-    <>
-      <div className="bg-red-400">{argument}</div>
       <Blog data={data}></Blog>
-    </>
   );
 }
