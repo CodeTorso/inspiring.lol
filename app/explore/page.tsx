@@ -39,7 +39,12 @@ export default async function Home() {
                   src={`https://did-see.pockethost.io/api/files/explore/${item.id}/${item.person_image}`}
                 />
                 <div className="w-full flex flex-col gap-8">
-                  <h2 className="text-center text-xl">{item.person_name}</h2>
+                  <div className="relative">
+                    <h2 className="text-center text-xl">{item.person_name}</h2>
+                    <h2 className="hidden sm:block text-center dark:text-gray-500 text-sm absolute top-1/2 -translate-y-1/2 right-0">
+                      {item.date.slice(0, 10)}
+                    </h2>
+                  </div>
                   <div className="flex flex-wrap gap-4 px-6 py-2">
                     {item.info_blobs.map((info) => {
                       return (

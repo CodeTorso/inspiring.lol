@@ -4,10 +4,10 @@ import EmblaCarousel from "@/components/EmblaCarousel";
 import { EmblaOptionsType } from "embla-carousel";
 
 function Rapidfire({ rapidFire }: { rapidFire: { q: string; a: string }[] }) {
-  const OPTIONS: EmblaOptionsType = { skipSnaps: true, };
+  const OPTIONS: EmblaOptionsType = { skipSnaps: true };
   const SLIDES = Array.from(rapidFire.keys());
   return (
-    <div className="flex justify-center items-center rounded-3xl h-80 w-full mb-10 bg-[#1c27c229]">
+    <div className="flex justify-center items-center rounded-3xl h-80 w-full mb-10  bg-purple-50 dark:bg-[#1c27c229]">
       <div className="w-[90%] h-[90%] flex items-center">
         <EmblaCarousel
           rapidfire={rapidFire}

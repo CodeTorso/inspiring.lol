@@ -46,10 +46,10 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           {slides.map((index) => (
             <div className="flex-[0_0_100%] min-w-0 px-4" key={index}>
               <div className="text-[4rem] font-semibold flex flex-col items-center justify-center gap-1 h-[13rem] rounded-[1.8rem]">
-                <h2 className="text-center text-gray-300 text-lg md:text-xl font-bold">
+                <h2 className="text-center text-gray-700 dark:text-gray-300 text-lg md:text-xl font-bold">
                   {rapidfire[index].q}
                 </h2>
-                <h2 className="text-center text-gray-100 text-3xl md:text-4xl">
+                <h2 className="text-center text-gray-900 dark:text-gray-100 text-3xl md:text-4xl">
                   {rapidfire[index].a}
                 </h2>
               </div>
