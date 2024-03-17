@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${GeistSans.className} w-screen overflow-x-hidden box-content mr-[calc(100vw-100%)] flex justify-center`}
+        className={`${GeistSans.className} w-screen overflow-x-hidden flex justify-center`}
       >
         <ThemeProvider
           attribute="class"
@@ -29,7 +29,7 @@ export default function RootLayout({
               <Navigation />
             </div>
           </div>
-          <div className="py-20 pl-2 pr-6 w-[95%] md:w-[70%] lg:w-[52rem] relative">
+          <div className="py-20 pl-2 pr-6 w-[90%] md:w-[70%] lg:w-[52rem] relative">
             {children}
           </div>
         </ThemeProvider>

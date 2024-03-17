@@ -4,7 +4,7 @@ import EmblaCarousel from "@/components/EmblaCarousel";
 import { EmblaOptionsType } from "embla-carousel";
 
 function Rapidfire({ rapidFire }: { rapidFire: { q: string; a: string }[] }) {
-  const OPTIONS: EmblaOptionsType = {};
+  const OPTIONS: EmblaOptionsType = { skipSnaps: true, };
   const SLIDES = Array.from(rapidFire.keys());
   return (
     <div className="flex justify-center items-center rounded-3xl h-80 w-full mb-10 bg-[#1c27c229]">

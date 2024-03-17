@@ -40,7 +40,7 @@ export default async function Home() {
                 />
                 <div className="w-full flex flex-col gap-8">
                   <h2 className="text-center text-xl">{item.person_name}</h2>
-                  <div className="flex gap-4 px-6 py-2">
+                  <div className="flex flex-wrap gap-4 px-6 py-2">
                     {item.info_blobs.map((info) => {
                       return (
                         <div
