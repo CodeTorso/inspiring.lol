@@ -1,4 +1,4 @@
-import { pastPost, todaysPost } from "@/actions/adminPresent";
+import { Explore, pastPost, todaysPost } from "@/actions/adminPresent";
 import { redirect } from "next/navigation";
 
 function Home({ params }: any) {
@@ -16,6 +16,14 @@ function Home({ params }: any) {
           type="submit"
         >
           Revalidate Today&apos;s
+        </button>
+      </form>
+      <form action={Explore}>
+        <button
+          className="py-2 px-4 rounded-md border-2 border-gray-400 dark:border-gray-700"
+          type="submit"
+        >
+          Revalidate Explore
         </button>
       </form>
       <form className="flex flex-col gap-5 items-center" action={pastPost}>

@@ -4,7 +4,7 @@ import "./globals.css";
 import Navigation from "../components/navigation";
 import { ThemeProvider } from "@/components/themeProvider";
 export const metadata: Metadata = {
-  title: "inspiring.wtf",
+  title: "inspiring.lol",
   description: "Listen to daily talks of developers around the world",
 };
 
