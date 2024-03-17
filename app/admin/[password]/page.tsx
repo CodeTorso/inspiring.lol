@@ -1,4 +1,4 @@
-import { pastPost, todaysPost } from "@/app/actions/adminPresent";
+import { pastPost, todaysPost } from "@/actions/adminPresent";
 import { redirect } from "next/navigation";
 
 function Home({ params }: any) {

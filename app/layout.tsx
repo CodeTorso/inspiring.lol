@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
-import Navigation from "./navigation";
+import Navigation from "../components/navigation";
 import { ThemeProvider } from "@/components/themeProvider";
 export const metadata: Metadata = {
   title: "inspiring.wtf",
