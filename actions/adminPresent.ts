@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 
 export async function todaysPost() {
   revalidatePath("/");
-  redirect("/");
+  redirect("/explore");
 }
 
 export async function Explore() {
@@ -16,5 +16,5 @@ export async function Explore() {
 export async function pastPost(formData: FormData) {
   const date = formData.get("date");
   revalidatePath(`/blogs/${date}`);
-  redirect("/blogs/${date}");
+  redirect("/explore");
 }
