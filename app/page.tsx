@@ -7,5 +7,10 @@ export default async function Home() {
     .padStart(2, "0")}-${date.getDate()}`;
   const data = await fetchBlog(argument);
 
-  return <Blog data={data}></Blog>;
+  return (
+    <>
+      <div className="bg-red-400">{argument}</div>
+      <Blog data={data}></Blog>
+    </>
+  );
 }
