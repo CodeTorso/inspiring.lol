@@ -10,7 +10,7 @@ import { ThemeToggler } from "@/components/themeToggle";
 function Navigation() {
   const pathname = usePathname();
   return (
-    <div className="h-full flex sm:flex-col sm:justify-end lg:justify-center gap-6 lg:gap-2">
+    <div className="max-sm:items-center h-full flex sm:flex-col sm:justify-end lg:justify-center gap-6 lg:gap-2">
       <Link href="/search">
         <IoMdSearch
           size={46}
