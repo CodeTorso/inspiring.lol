@@ -24,8 +24,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="hidden sticky top-0 sm:flex flex-col pr-2 md:pr-4 lg:pr-8 justify-center h-screen">
-            <div className="border-r-[1px] border-gray-300 dark:border-gray-700 h-[98vh] px-[0.35rem] lg:px-6">
+          <div className="max-sm:py-1 backdrop-blur-sm max-sm:w-full z-10 sm:z-0 fixed bottom-0 sm:sticky sm:top-0 flex sm:flex-col sm:pr-2 md:pr-4 lg:pr-8 justify-center h-[5vh] sm:h-screen">
+            <div className="sm:border-r-[1px] border-gray-300 dark:border-gray-700 h-full sm:h-[98vh] px-[0.35rem] lg:px-6">
               <Navigation />
             </div>
           </div>

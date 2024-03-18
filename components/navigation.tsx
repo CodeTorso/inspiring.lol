@@ -10,14 +10,14 @@ import { ThemeToggler } from "@/components/themeToggle";
 function Navigation() {
   const pathname = usePathname();
   return (
-    <div className="h-full flex flex-col sm:justify-end lg:justify-center gap-6 lg:gap-2">
+    <div className="h-full flex sm:flex-col sm:justify-end lg:justify-center gap-6 lg:gap-2">
       <Link href="/search">
         <IoMdSearch
           size={46}
           className={`${
             pathname === "/search"
-              ? "hover:bg-blue-100 dark:hover:bg-gray-900 fill-blue-400"
-              : "hover:bg-gray-200 dark:hover:bg-gray-900 fill-gray-500"
+              ? "sm:hover:bg-blue-100 sm:dark:hover:bg-gray-900 fill-blue-400"
+              : "sm:hover:bg-gray-200 sm:dark:hover:bg-gray-900 fill-gray-500"
           } p-2 rounded-full transition-all`}
         />
       </Link>
@@ -26,8 +26,8 @@ function Navigation() {
           size={44}
           className={`${
             pathname === "/explore"
-              ? "hover:bg-blue-100 dark:hover:bg-gray-900 fill-blue-400"
-              : "hover:bg-gray-200 dark:hover:bg-gray-900 fill-gray-500"
+              ? "sm:hover:bg-blue-100 sm:dark:hover:bg-gray-900 fill-blue-400"
+              : "sm:hover:bg-gray-200 sm:dark:hover:bg-gray-900 fill-gray-500"
           } p-2 rounded-full transition-all`}
         />
       </Link>
@@ -36,8 +36,8 @@ function Navigation() {
           size={46}
           className={`${
             pathname.slice(0, 6) === "/"
-              ? "hover:bg-blue-100 dark:hover:bg-gray-900 fill-blue-400"
-              : "hover:bg-gray-200 dark:hover:bg-gray-900 fill-gray-500"
+              ? "sm:hover:bg-blue-100 sm:dark:hover:bg-gray-900 fill-blue-400"
+              : "sm:hover:bg-gray-200 sm:dark:hover:bg-gray-900 fill-gray-500"
           } p-2 rounded-full transition-all`}
         />
       </Link>
